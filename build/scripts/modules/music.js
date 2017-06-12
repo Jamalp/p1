@@ -195,7 +195,6 @@
 	];
 
 	const songOnDeck = playlist[Math.floor(Math.random()*playlist.length)];
-	console.log(songOnDeck);
 
 	songTitle.innerText = songOnDeck.song;
 	songTitle.href = songOnDeck.link;
