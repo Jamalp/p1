@@ -1,0 +1,162 @@
+.work-container {
+	position:relative;
+	margin:0 auto;
+	margin-bottom:450px;
+	background-color:#fff;
+}
+.work-wrap {
+	padding:15vh 15vw 0;
+	padding-bottom:150px;
+	.work {
+		display:table;
+		position:relative;
+		width:550px;
+		margin-bottom:20px;
+		&:hover {
+			.work-title span:after {
+				width:100%;
+			}
+		}
+		&.work--layout-right {
+			margin-left:auto;
+			.work-image-wrapper {
+				margin-left:auto;
+			}
+			.work-title {
+				right:300px;
+				left:auto;
+			}
+			.work-link {
+				right:auto;
+				left:43px;
+			}
+		}
+	}
+	.work-image-wrapper{
+		position:relative;
+		width:420px;
+		-webkit-backface-visibility: hidden;
+	}
+	.work-image-shadow {
+		display:block;
+		content:'';
+		position: absolute;
+		bottom: -.75em;
+		left: 2.5%;
+		width: 95%;
+		height: 420px;	
+		background-image:url('../img/masterdynamic.jpg');
+		filter: blur(1.25em);
+		z-index: -1;
+		-webkit-backface-visibility: hidden;
+
+	}
+	.work-image {
+		width:420px;
+		height:420px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		border-radius:4px;
+	}
+	.image-md {
+		background-image:url('../img/masterdynamic.jpg');
+	}
+	.image-umbro {
+		background-image:url('../img/umbro.jpg')
+	}
+	.image-tracksmith {
+		background-image:url('../img/tracksmith.jpg');
+	}
+	.image-randco {
+		background-image:url('../img/randco.jpg');
+	}
+	.image-becca {
+		background-image:url('../img/becca.jpg');
+	}
+	.image-nr {
+		background-image:url('https://www.naturalretreats.com/sites/default/files/pexels-photo-115065.jpg');
+		background-position:top;
+	}
+	.work-image-wrapper,.work-title {
+		transition: transform 0.3s ease-out;
+	}
+	.work-title {
+		position:absolute;
+		top:60px;
+		left:300px;
+		font-family: 'Roboto', sans-serif;
+		font-size:80px;
+		line-height:1.1;
+		color:#0A0A0A;
+		white-space:nowrap;
+		span {
+			position:relative;
+			&:after {
+				content:'';
+				position:absolute;
+				bottom:-5px;
+				left:0;
+				right:0;
+				width:0;
+				height:45px;
+				transition:width .4s ease;
+				background: linear-gradient(to right, #f0c27b, #4b1248);
+				z-index:-1;
+				opacity:.3
+			}
+			&.new-line {
+				margin-left:35px;
+			}
+		}
+		
+		
+	}
+	.work-link {
+		font-size: 16px;
+		line-height: 1.1;
+		color:#000;
+		font-family: 'Source Code Pro', monospace;
+		position: absolute;
+		right: 43px;
+		bottom: 0;
+		transition:color .3s ease;
+		&:hover {
+			color:#4b1248;
+		}	
+	}
+}
+
+// Moving letters
+.work-letters {
+	span {
+		position: absolute;
+		p {
+			font-size: 480px;
+			font-family: roboto;
+			z-index: -1;
+			opacity: .9;
+			color:#000;
+			-webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		  background-clip: text;
+		  background-image:linear-gradient(to right, #f0c27b, #4b1248);
+		}
+		&.w {
+			top: -40px;
+			right: 15vw;
+		}
+		&.o {
+			top:800px;
+			left:6vw;
+		}
+		&.r {
+			left: 45vw;
+			top: 1408px;
+		}
+		&.k {
+	    top: 1900px;
+	    left: 25vw;
+		}
+	}
+}
