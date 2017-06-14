@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title>Hey, it's Jamal</title>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/style.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
 </head>
@@ -12,13 +15,15 @@
 		<div id="photosGif" class="gif"></div>
 		<div class="ambient"></div>
 		<div class="text">
-			<p>Hey, I'm Jamal. I'm a front end web developer with over five of experience working in digital and advertising agencies.</p>
-			<p>I've had the privilege to work with companies and organizations such as The New York Times, Umbro, The New England Aquarium, Tracksmith, Master & Dynamic, R+Co, Natural Retreats & <span class="red">RED</span>.</p>
+			<p>Hey, I'm Jamal. I'm a front end web developer with over five years of experience working in digital and advertising agencies.</p>
+			<p>I've had the privilege to work with companies and organizations such as The New York Times, Umbro, Tracksmith, Master &amp; Dynamic, R+Co &amp; <span class="red">RED</span>.</p>
 			<br>
 			<p>Occasionally I take <a href="http://www.jamalpowell.com" id="showPhotos" class="underline">photos</a>.</p>
-			<!-- <span>Thats me -></span>  -->
 		</div>
 	</article>
+	
+	<div class="page-container">
+		
 	<section class="work-container">
 		<div class=" work-letters">
 			<span class="rellax w"><p>W</p></span>
@@ -29,60 +34,60 @@
 		<div class="work-grid">
 			<div class="work-wrap">
 				<div class="work work--layout">
-					<div class="work-image-wrapper">
+					<a href="http://www.masterdynamic.com" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-md"></div>
 						<div class="work-image image-md"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>Master</span><br><span class="new-line">&amp; Dynamic</span>
 					</h3>
 					<a href="http://www.masterdynamic.com" class="work-link" target="_blank">Discover</a>
 				</div>
 				<div class="work work--layout  work--layout-right">
-					<div class="work-image-wrapper">
+					<a href="http://www.naturalretreats.com" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-nr"></div>
 						<div class="work-image image-nr"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>Natural</span><br><span class="new-line">Retreats</span></span>
 					</h3>
-					<a href="http://www.thefader.com" class="work-link" target="_blank">Discover</a>
+					<a href="http://www.naturalretreats.com" class="work-link" target="_blank">Discover</a>
 				</div>
 				<div class="work work--layout">
-					<div class="work-image-wrapper">
+					<a href="http://www.randco.com" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-randco"></div>
 						<div class="work-image image-randco"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>R+Co</span>
 					</h3>
 					<a href="http://www.randco.com" class="work-link" target="_blank">Discover</a>
 				</div>
 				<div class="work work--layout  work--layout-right">
-					<div class="work-image-wrapper">
+					<a href="http://www.tracksmith.com" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-tracksmith"></div>
 						<div class="work-image image-tracksmith"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>Tracksmith</span></span>
 					</h3>
 					<a href="http://www.tracksmith.com" class="work-link" target="_blank">Discover</a>
 				</div>
 				<div class="work work--layout">
-					<div class="work-image-wrapper">
+					<a href="http://www.randco.com" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-becca"></div>
 						<div class="work-image image-becca"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>Becca</span>
 					</h3>
 					<a href="http://www.randco.com" class="work-link" target="_blank">Discover</a>
 				</div>
 				<div class="work work--layout work--layout-right">
-					<div class="work-image-wrapper">
+					<a href="http://www.umbro.com/en-us" class="work-image-wrapper" target="_blank">
 						<div class="work-image-shadow image-umbro"></div>
 						<div class="work-image image-umbro"></div>
-					</div>
+					</a>
 					<h3 class="work-title">
 						<span>Umbro</span>
 					</h3>
@@ -92,32 +97,34 @@
 		</div>	
 	</section>
 	<footer class="footer">
-		<div id="footerContent" class="overlay">
+		<div id="footerContent" class="inner">
 			<div class="scramble">
 				<h1>Jamal Powell</h1>
 			</div>
 			<div class="lower-level">
 				<div class="contact">
 					<h4 class="title">Connect</h4>
-					<a href="mailto:jamalkpowell@gmail.com" title="">Email</a>
-					<a href="http://www.instagram.com/jamalpowell" title="" target="_blank">Instagram</a>
+					<a class="crispy" href="mailto:jamalkpowell@gmail.com" title="">Email</a>
+					<a class="crispy" href="http://www.instagram.com/jamalpowell" title="" target="_blank">Instagram</a>
 				</div>
 				<div class="location">
-					<h4 class="title">Residence</h4>
-					<p>Los Angeles, California</p>
-					<p id="weather">72 degrees &amp; Sunny</p>
+					<h4 class="title">Residing in</h4>
+					<p class="crispy">Los Angeles, California</p>
+					<p id="weather" class="crispy">72° &amp; Sunny..Probably</p>
 				</div>
 				<div class="music">
-					<a href="https://open.spotify.com/user/jamalp/playlist/5EnXtqnZs7VR0rrzWUqlhn" class="title" target="_blank">Rotation</a>
-					<a href="" class="song-link" id="songTitle" target="=_blank">Navajo</a>
-					<a href="" class="song-link" target="=_blank">- <span id="songArtist">Masego</span></a>
+					<a href="https://open.spotify.com/user/jamalp/playlist/5EnXtqnZs7VR0rrzWUqlhn" class="title" target="_blank">On Rotation</a>
+					<a href="" id="songLink" class="crispy" target="=_blank"><span id="songTitle"></span><span id="songArtist">Masego</span></a>
 				</div>
 			</div>
 		</div>
+
 	</footer>
-	<script src="scripts/anime.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="scripts/rellax.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="scripts/weather.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="scripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
+	</div>
+
+	<script src="scripts/anime.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/rellax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/weather.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/main.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

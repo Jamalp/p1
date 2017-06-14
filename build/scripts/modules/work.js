@@ -104,7 +104,9 @@
 	};
 
 	const init = function() {
-		Array.from(document.querySelectorAll('.work--layout')).forEach(el => new TiltObj(el));
+		if (!document.body.classList.contains('mobile')) {
+			Array.from(document.querySelectorAll('.work--layout')).forEach(el => new TiltObj(el));
+		}
 		const rellax = new Rellax('.rellax');
 	}
 	init();

@@ -9,4 +9,8 @@
 	};
 	photosText.addEventListener('mouseenter', showPhotoGif);
 	photosText.addEventListener('mouseleave', hidePhotoGif);
+
+	if (/Mobi/.test(navigator.userAgent)) {
+    document.body.classList.add('mobile')
+	} 
 }());

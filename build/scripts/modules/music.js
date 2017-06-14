@@ -1,7 +1,7 @@
 (function() {
 	const songTitle = document.getElementById('songTitle');
 	const songArtist = document.getElementById('songArtist');
-	const songLink = document.querySelectorAll('song-link');
+	const songLink = document.getElementById('songLink');
 	const playlist = [
 		{
 			song : 'Navajo',
@@ -197,8 +197,7 @@
 	const songOnDeck = playlist[Math.floor(Math.random()*playlist.length)];
 
 	songTitle.innerText = songOnDeck.song;
-	songTitle.href = songOnDeck.link;
-	songArtist.innerText = songOnDeck.artist;
-	songArtist.href = songOnDeck.link;
+	songLink.href = songOnDeck.link;
+	songArtist.innerText = '- ' + songOnDeck.artist;
 
 }());

@@ -1,71 +1,92 @@
-.footer{
- position : fixed;
- z-index : -1;
- right : 0;
- bottom : 0;
- left : 0;
+.footer {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: url('../img/black.jpeg') center center no-repeat;
+    background-color: black;
+    background-size: cover;
 
- width : 100%;
- height : 450px;
+    @include mobile {
+        position: static;
+        height: auto;
+    }
+    .inner {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 10vw;
+        color: #FFF;
 
- background : url('../img/black.jpeg') center center no-repeat;
- background-color : black;
- background-size : cover;
- .overlay{
-  display : block;
-  display : flex;
-  flex-direction : column;
+        @include mobile {
+            padding: 60px 30px 30px;
+        }
+    }
+    .scramble {
+        h1 {
+            font-size: 48px;
+        }
+    }
+    .lower-level {
+        display: flex;
+        align-items: flex-start;
 
-  width : 100%;
-  height : 100%;
-  padding-top : 60px;
-  padding-bottom : 60px;
-  padding-left : 15vw;
-  // background-color:#000;
+        @include mobile {
+            display: block;
+            padding-top: 40px;
+        }
+        & > div {
+            margin-right: 40px;
 
-  color : #FFF;
+            @include mobile {
+                margin-bottom: 30px;
+            }
+        }
+        .title {
+            font-size: 18px;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        a {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 8px;
 
-  justify-content : space-between;
- }
- .scramble{
-  h1{
-   font-size : 48px;
-  }
- }
- .lower-level{
-  display : flex;
+            @include mobile {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+        }
+        .music {
+            & > a.title {
+                font-size: 18px;
+                margin-bottom: 14px;
+                letter-spacing: 1px;
+            }
+            a {
+                font-size: 14px;
 
-  align-items : flex-start;
-  & > div{
-   margin-right : 40px;
-  }
-  .title{
-   margin-bottom : 14px;
-   font-size:18px;
-   letter-spacing:1px;
-  }
-  a{
-   display : block;
-   margin-bottom:8px;
-   font-size:14px;
-  }
-  p {
-  	font-size:14px;
-  	margin-bottom:8px;
-  }
-  .music {
-  	& > a.title {
-  		margin-bottom:14px;
-  		font-size:18px;
-  		letter-spacing:1px;
-  	}
-  	a {
-	  	font-size:14px;
-	  	margin-bottom:8px;	
-  	}
-  	a:last-child {
-  		padding-left:10px;
-  	}
-  }
- }
+                @include mobile {
+                    font-size: 16px;
+                }
+                span:last-child {
+                    display: block;
+                    margin-top: 8px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
 }

@@ -1,162 +1,241 @@
 .work-container {
-	position:relative;
-	margin:0 auto;
-	margin-bottom:450px;
-	background-color:#fff;
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+    margin: 0 auto;
+    background-color: #FFF;
+
+    @include mobile {
+        margin-bottom: 0;
+    }
+}
+.work-grid,
+.work-letters {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .work-wrap {
-	padding:15vh 15vw 0;
-	padding-bottom:150px;
-	.work {
-		display:table;
-		position:relative;
-		width:550px;
-		margin-bottom:20px;
-		&:hover {
-			.work-title span:after {
-				width:100%;
-			}
-		}
-		&.work--layout-right {
-			margin-left:auto;
-			.work-image-wrapper {
-				margin-left:auto;
-			}
-			.work-title {
-				right:300px;
-				left:auto;
-			}
-			.work-link {
-				right:auto;
-				left:43px;
-			}
-		}
-	}
-	.work-image-wrapper{
-		position:relative;
-		width:420px;
-		-webkit-backface-visibility: hidden;
-	}
-	.work-image-shadow {
-		display:block;
-		content:'';
-		position: absolute;
-		bottom: -.75em;
-		left: 2.5%;
-		width: 95%;
-		height: 420px;	
-		background-image:url('../img/masterdynamic.jpg');
-		filter: blur(1.25em);
-		z-index: -1;
-		-webkit-backface-visibility: hidden;
+    padding: 15vh 10vw 150px;
 
-	}
-	.work-image {
-		width:420px;
-		height:420px;
-		background-size:cover;
-		background-repeat:no-repeat;
-		background-position:center center;
-		border-radius:4px;
-	}
-	.image-md {
-		background-image:url('../img/masterdynamic.jpg');
-	}
-	.image-umbro {
-		background-image:url('../img/umbro.jpg')
-	}
-	.image-tracksmith {
-		background-image:url('../img/tracksmith.jpg');
-	}
-	.image-randco {
-		background-image:url('../img/randco.jpg');
-	}
-	.image-becca {
-		background-image:url('../img/becca.jpg');
-	}
-	.image-nr {
-		background-image:url('https://www.naturalretreats.com/sites/default/files/pexels-photo-115065.jpg');
-		background-position:top;
-	}
-	.work-image-wrapper,.work-title {
-		transition: transform 0.3s ease-out;
-	}
-	.work-title {
-		position:absolute;
-		top:60px;
-		left:300px;
-		font-family: 'Roboto', sans-serif;
-		font-size:80px;
-		line-height:1.1;
-		color:#0A0A0A;
-		white-space:nowrap;
-		span {
-			position:relative;
-			&:after {
-				content:'';
-				position:absolute;
-				bottom:-5px;
-				left:0;
-				right:0;
-				width:0;
-				height:45px;
-				transition:width .4s ease;
-				background: linear-gradient(to right, #f0c27b, #4b1248);
-				z-index:-1;
-				opacity:.3
-			}
-			&.new-line {
-				margin-left:35px;
-			}
-		}
-		
-		
-	}
-	.work-link {
-		font-size: 16px;
-		line-height: 1.1;
-		color:#000;
-		font-family: 'Source Code Pro', monospace;
-		position: absolute;
-		right: 43px;
-		bottom: 0;
-		transition:color .3s ease;
-		&:hover {
-			color:#4b1248;
-		}	
-	}
+    @include mobile {
+        padding: 60px 30px 0;
+    }
+    .work {
+        position: relative;
+        display: table;
+        width: 550px;
+        margin-bottom: 40px;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        &:hover {
+            .work-title span:after {
+                width: 100%;
+            }
+        }
+        &.work--layout-right {
+            margin-left: auto;
+            .work-image-wrapper {
+                margin-left: auto;
+            }
+            .work-title {
+                right: 300px;
+                left: auto;
+
+                @include mobile {
+                    top: -28px;
+                    left: 30px;
+                }
+            }
+            .work-link {
+                right: auto;
+                left: 43px;
+            }
+        }
+    }
+    .work-image-wrapper {
+        position: relative;
+        display: block;
+        width: 420px;
+        transform: translate(0);
+
+        -webkit-backface-visibility: hidden;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    .work-image-shadow {
+        position: absolute;
+        z-index: -1;
+        bottom: -.75em;
+        left: 2.5%;
+        display: block;
+        width: 95%;
+        height: 420px;
+        content: '';
+        background-image: url('../img/masterdynamic.jpg');
+
+        filter: blur(1.25em);
+        -webkit-backface-visibility: hidden;
+        @include mobile {
+            width: 95%;
+            height: 360px;
+        }
+    }
+    .work-image {
+        width: 420px;
+        height: 420px;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @include mobile {
+            width: 100%;
+            height: 360px;
+        }
+    }
+    .image-md {
+        background-image: url('../img/masterdynamic.jpg');
+    }
+    .image-umbro {
+        background-image: url('../img/umbro.jpg');
+    }
+    .image-tracksmith {
+        background-image: url('../img/tracksmith.jpg');
+    }
+    .image-randco {
+        background-image: url('../img/randco.jpg');
+    }
+    .image-becca {
+        background-image: url('../img/becca.jpg');
+    }
+    .image-nr {
+        background-image: url('https://www.naturalretreats.com/sites/default/files/pexels-photo-115065.jpg');
+        background-position: top;
+    }
+    .work-image-wrapper,
+    .work-title {
+        transition: transform .4s ease-out;
+    }
+    .work-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 80px;
+        line-height: 1.1;
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        left: 300px;
+        white-space: nowrap;
+        color: #0A0A0A;
+
+        @include mobile {
+            font-size: 48px;
+            top: -28px;
+            left: 30px;
+        }
+        @media only screen
+        and (min-device-width: 768px)
+        and (max-device-width: 1024px)
+        and (orientation: portrait)
+        and (-webkit-min-device-pixel-ratio: 1) {
+            font-size: 70px;
+        }
+        span {
+            position: relative;
+            &:after {
+                position: absolute;
+                z-index: -1;
+                right: 0;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 45px;
+                content: '';
+                transition: width .4s ease;
+                opacity: .3;
+                background: linear-gradient(to right, #F0C27B, #4B1248);
+            }
+            &.new-line {
+                margin-left: 35px;
+            }
+        }
+    }
+    .work-link {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        line-height: 1.1;
+        position: absolute;
+        right: 43px;
+        bottom: 0;
+        transition: color .3s ease;
+        color: #000;
+
+        @include mobile {
+            display: none;
+        }
+        &:hover {
+            color: #4B1248;
+        }
+    }
 }
 
 // Moving letters
 .work-letters {
-	span {
-		position: absolute;
-		p {
-			font-size: 480px;
-			font-family: roboto;
-			z-index: -1;
-			opacity: .9;
-			color:#000;
-			-webkit-background-clip: text;
-		  -webkit-text-fill-color: transparent;
-		  background-clip: text;
-		  background-image:linear-gradient(to right, #f0c27b, #4b1248);
-		}
-		&.w {
-			top: -40px;
-			right: 15vw;
-		}
-		&.o {
-			top:800px;
-			left:6vw;
-		}
-		&.r {
-			left: 45vw;
-			top: 1408px;
-		}
-		&.k {
-	    top: 1900px;
-	    left: 25vw;
-		}
-	}
+    span {
+        position: absolute;
+        p {
+            font-family: roboto;
+            font-size: 480px;
+            z-index: -1;
+            opacity: .9;
+            color: #000;
+            background-image: linear-gradient(to right, #F0C27B, #4B1248);
+            -webkit-background-clip: text;
+                    background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+            @include mobile {
+                transform: rotate(90deg);
+            }
+        }
+        &.w {
+            top: -40px;
+            right: 10vw;
+
+            @include mobile {
+                top: -60px;
+                right: auto;
+                left: -50%;
+            }
+        }
+        &.o {
+            top: 900px;
+            left: 3vw;
+
+            @include mobile {
+                top: 600px;
+                left: -50%;
+            }
+        }
+        &.r {
+            top: 1170px;
+            left: 45vw;
+
+            @include mobile {
+                left: -50%;
+            }
+        }
+        &.k {
+            top: 1700px;
+            left: 25vw;
+
+            @include mobile {
+                left: -50%;
+            }
+        }
+    }
 }
