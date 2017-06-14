@@ -4,7 +4,7 @@
     overflow: hidden;
     width: 100%;
     height: 85vh;
-    background: url('../img/bg.jpg') center center no-repeat;
+    background: url('https://s3.amazonaws.com/turkey2015/Cappadocia/DSCF7856.jpg') center center no-repeat;
     background-size: cover;
 }
 
@@ -19,7 +19,7 @@
     height: 100%;
     transition: opacity .7s ease;
     opacity: 0;
-    background: url('../img/slideshow.gif') center center no-repeat;
+    background: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/slideshow.gif') center center no-repeat;
     background-size: cover;
 
     @include mobile {

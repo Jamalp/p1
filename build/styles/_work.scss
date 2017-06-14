@@ -76,7 +76,6 @@
         width: 95%;
         height: 420px;
         content: '';
-        background-image: url('../img/masterdynamic.jpg');
 
         filter: blur(1.25em);
         -webkit-backface-visibility: hidden;
@@ -99,22 +98,22 @@
         }
     }
     .image-md {
-        background-image: url('../img/masterdynamic.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/masterdynamic.jpg');
     }
     .image-umbro {
-        background-image: url('../img/umbro.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/umbro.jpg');
     }
     .image-tracksmith {
-        background-image: url('../img/tracksmith.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/tracksmith.jpg');
     }
     .image-randco {
-        background-image: url('../img/randco.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/randco.jpg');
     }
     .image-becca {
-        background-image: url('../img/becca.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/becca.jpg');
     }
     .image-nr {
-        background-image: url('https://www.naturalretreats.com/sites/default/files/pexels-photo-115065.jpg');
+        background-image: url('https://s3-us-west-2.amazonaws.com/jamalpowell.com/img/nr.jpg');
         background-position: top;
     }
     .work-image-wrapper,
