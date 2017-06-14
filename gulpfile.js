@@ -34,10 +34,10 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('dist/styles/'))
+    .pipe(gulp.dest('styles/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('dist/styles/'))
+    .pipe(gulp.dest('styles/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
@@ -57,10 +57,10 @@ gulp.task('scripts', function(){
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     .pipe(babel())
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(gulp.dest('scripts/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(gulp.dest('scripts/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
